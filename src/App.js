@@ -9,6 +9,8 @@ import GMap from './component/GMap';
 
 
 class App extends Component {
+
+
 state = {
   listings: listings
 }
@@ -19,7 +21,7 @@ state = {
         <p>Hello {this.state.listings[0].host_name} on est dans App.js</p>
         
         <SliderRange />
-        <GMap />
+        <GMap mapDetails={this.state.listings}/>
       </div>
     );
   }
