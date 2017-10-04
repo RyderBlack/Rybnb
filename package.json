@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
     "mapbox-gl": "^0.40.1",
     "material-ui": "^0.19.2",
     "material-ui-search-bar": "^0.4.0",

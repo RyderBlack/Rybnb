@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import ReactMapboxGl, { Layer, GeoJSONLayer } from "react-mapbox-gl";
+import ReactMapboxGl, { Marker } from "react-mapbox-gl";
+//import markerImage1 from '../assets/marker-voiture-vert.png';
+import markerImage2 from '../assets/marker-voiture-violet-info-bulle.png';
+import '../App.css';
 
 const Map = ReactMapboxGl({
   accessToken: "pk.eyJ1IjoicnlkZXJibGFjayIsImEiOiJjajhidzF5ejkwMXRnMzNwMmtuMmZqZzlrIn0.Z9YztQmEdBTnRzlF_A_XvQ"
@@ -8,11 +11,20 @@ const Map = ReactMapboxGl({
 export default class GMap extends Component {
 
   
-   
-  
 
   render() {
-    console.log(this.props.mapDetails)
+
+    let newObj = Object.values(this.props.mapDetails);
+    //console.log(newObj[0]);
+    let markersListings = newObj.map((data, index) => 
+     <Marker key={index}
+      coordinates={[data.position.lng, data.position.lat]}
+      anchor="bottom">
+      
+      <img src={markerImage2} alt="" className="img-marker"/>
+    </Marker>
+    )
+
     return (
       <div>
       <p>GMap</p>
@@ -22,22 +34,10 @@ export default class GMap extends Component {
         height: "700px",
         width: "700px"
       }}
-      zoom={[12]}
-      center={[-122.335167,47.608013]}>
-        <Layer
-          type="symbol"
-          id="marker"
-          layout={{ "icon-image": "marker-16" }}>
+      zoom={[11]}
+      center={[5.369780,43.296482]}>
+      {markersListings}
         
-        </Layer>
-        <GeoJSONLayer
-        data={this.props.mapDetails}
-        symbolLayout={{
-          "text-field": "{place}",
-          "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-          "text-offset": [0, 0.6],
-          "text-anchor": "top"
-        }}/>
     </Map>
       </div>
     );

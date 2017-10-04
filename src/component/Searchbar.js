@@ -7,6 +7,7 @@ export default class Searchbar extends Component {
     return (
       <div>
       <p>Searchbar</p>
+      
       </div>
     );
   }
