@@ -35,7 +35,7 @@ export default class GMap extends Component {
         width: "700px"
       }}
       zoom={[11]}
-      center={[5.369780,43.296482]}>
+      center={[-0.118092,51.509865]}>
       {markersListings}
         
     </Map>

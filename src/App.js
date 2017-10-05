@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-//import listings from './listings';
+import listings from './listings';
 //import './App.css';
 import SearchBar from './component/Searchbar';
-import SliderRange from './component/SliderRange';
-import GMap from './component/GMap';
+//import SliderRange from './component/SliderRange';
+import ListingsGrid from './component/ListingsGrid';
+//import GMap from './component/GMap';
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //import AutoComplete from 'material-ui/AutoComplete';
 
@@ -14,10 +15,11 @@ class App extends Component {
     super(props);
     
     this.state = {
-      listings : []
-    };
+      listings : listings
+    }
   }
   
+  /*
   componentDidMount() {    
 
     var self = this;
@@ -30,16 +32,14 @@ class App extends Component {
       console.log(this.state.listings);
     });
   }
-
+*/
 
   render() {
     return (
       <div className="App">
-        <p>Hello  on est dans App.js</p>
-        <SearchBar />
-        <SliderRange />
-        {console.log(this.state.listings)}
-        <GMap mapDetails={this.state.listings} />
+        <SearchBar />    
+        
+        <ListingsGrid  listingsDetails={this.state.listings}/>
 
       </div>
     );

@@ -1,3 +1,7 @@
+body {
+  background-color: #F5F5F5;
+}
+
 .App {
   text-align: center;
 }
@@ -26,4 +30,54 @@
 .img-marker {
   width: 20px;
   height: 22px;
+}
+
+
+.card_fix::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+}
+
+.searchbar {
+  justify-content: center!important;
+  align-self: center!important;
+  align-items: center!important;
+  border-bottom: 2px solid rgba(112, 188, 255, 0.9)!important;
+  vertical-align: middle!important;
+}
+
+.active {
+  color: rgba(112, 188, 255, 0.9)!important;
+  font-size: 12px!important;
+}
+
+h1 {
+  font-family: 'Orbitron';
+  color: rgba(112, 188, 255, 0.9);
+  vertical-align: middle!important;
+}
+
+.button {
+  background-color: rgba(112, 188, 255, 0.9)!important;
+  vertical-align: middle!important;
+}
+
+.wrapbar {
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.row {
+  margin: 0;
+}
+
+.input-field, .button {
+  margin-top: 50px!important;
 }
