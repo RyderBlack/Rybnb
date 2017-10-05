@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 //import listings from './listings';
-//import vehicules from './vehicules';
 //import './App.css';
-//import SearchBar from './component/Searchbar';
+import SearchBar from './component/Searchbar';
 import SliderRange from './component/SliderRange';
 import GMap from './component/GMap';
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -37,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <p>Hello  on est dans App.js</p>
-        
+        <SearchBar />
         <SliderRange />
         {console.log(this.state.listings)}
         <GMap mapDetails={this.state.listings} />
