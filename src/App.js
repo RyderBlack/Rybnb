@@ -4,7 +4,7 @@ import listings from './listings';
 import SearchBar from './component/Searchbar';
 //import SliderRange from './component/SliderRange';
 import ListingsGrid from './component/ListingsGrid';
-import GMap from './component/GMap';
+//import GMap from './component/GMap';
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //import AutoComplete from 'material-ui/AutoComplete';
 
@@ -39,7 +39,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />    
         <ListingsGrid  listingsDetails={this.state.listings}/>
-        <GMap />
+        
       </div>
     );
   }
