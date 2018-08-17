@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import listings from './listings';
 //import './App.css';
 import SearchBar from './component/Searchbar';
-import SliderRange from './component/SliderRange';
+//import SliderRange from './component/SliderRange';
 import ListingsGrid from './component/ListingsGrid';
 //import GMap from './component/GMap';
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -37,8 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />   
-        <SliderRange /> 
+        <SearchBar />    
         <ListingsGrid  listingsDetails={this.state.listings}/>
         
       </div>
